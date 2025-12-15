@@ -4,11 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melodies</title>
+    <title>Spotify</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="utility.css">
 </head>
 
 <body>
+    <header class="header flex justify-center align-items">
+        <div class="header-left">
+            <img src="./assets/svgs/logo.svg" class="svg-header logo-img" alt="logo">
+        </div>
+        <div class="header-mid flex gap-10">
+            <div class="home-circle">
+                <img src="./assets/svgs/home.svg" class="svg-header home-img" alt="home">
+            </div>
+            <div class="search-bar flex gap-10">
+                <div class="search-left flex gap-10">
+                    <img src="./assets/svgs/search.svg" class="svg-header search-img" alt="search">
+                    <input type="text" placeholder="What do you want to play?" class="search-input">
+                </div>
+                <div class="search-right flex">
+                    <img src="./assets/svgs/browse.svg" class="svg-header browse-img" alt="browse">
+                </div>
+            </div>
+        </div>
+        <div class="header-right flex align-items gap-35">
+            <div class="header-links flex align-items gap-10">
+                <a href="#" class="header-link ">Premium</a>
+                <a href="#" class="header-link">Support</a>
+                <a href="#" class="header-link">Download</a>
+            </div>
+            <div class="install flex align-items">
+                <img src="./assets/svgs/install.svg" class="svg-header install-img" alt="install">
+                <p>Install App</p>
+            </div>
+            <div class="authenticate flex align-items gap-10">
+                <p class="sign-up">Sign up</p>
+                <button class="btn log-in">Log in</button>
+            </div>
+        </div>
+    </header>
+    <div class="container flex">
+        <div class="left border"></div>
+        <div class="right border"></div>
+    </div>
 
 
 
