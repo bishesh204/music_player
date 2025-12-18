@@ -1,5 +1,7 @@
 :root {
     --secondary-font-color: #b3b3b3;
+    --secondary-color: #1f1f1f;
+    --tertiary-color: #2f2f2f;
 }
 
 * {
@@ -7,6 +9,10 @@
     padding: 0;
     color: #fff;
     font-family: SpotifyMixUI, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic", sans-serif;
+}
+
+body {
+    background-color: #000000;
 }
 
 header {
@@ -63,12 +69,12 @@ header .svg-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1f1f1f;
+    background-color: var(--secondary-color);
 }
 
 .search-bar {
     border-radius: 50px;
-    background-color: #1f1f1f;
+    background-color: var(--secondary-color);
     padding: 5px 15px;
     display: flex;
     justify-content: space-between;
@@ -151,4 +157,104 @@ header .svg-header {
 .right {
     width: 75vw;
     color: aqua;
+}
+
+.container .left,
+.container .right {
+    height: 90vh;
+    background-color: rgb(20, 20, 20);
+    border-radius: 8px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.container .left {
+    margin: 0px 0px 10px 10px;
+    padding: 10px;
+}
+
+.container .right {
+    margin: 0px 10px 10px 10px;
+}
+
+.left-top {
+    padding: 10px;
+}
+
+.left-top p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.left-top img {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) invert(1);
+}
+
+.left-box {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--tertiary-color);
+}
+
+.left-box .head-box {
+    font-size: 16px;
+    font-weight: 800;
+
+}
+
+.left-playlist,
+.left-podcast {
+    margin: 10px 0px;
+}
+
+.left-box .second-box {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-box {
+    font-size: 13px;
+    padding: 8px 16px;
+    min-width: fit-content;
+    max-width: fit-content;
+}
+
+.head-box {
+    margin-bottom: 15px;
+}
+
+.second-box {
+    margin-bottom: 15px;
+}
+
+.left-grid-link {
+    text-decoration: none;
+    color: var(--secondary-font-color);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.left-cookie {
+    font-size: 12px;
+}
+
+.left-language {
+    font-size: 16px;
+    border: #fff 1px solid;
+    padding: 10px 30px;
+    max-width: fit-content;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+.left-language img {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
 }
