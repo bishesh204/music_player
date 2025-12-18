@@ -164,8 +164,10 @@ header .svg-header {
     height: 90vh;
     background-color: rgb(20, 20, 20);
     border-radius: 8px;
-    padding: 15px;
+    padding: 35px 40px;
     box-sizing: border-box;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .container .left {
@@ -257,4 +259,127 @@ header .svg-header {
     height: 16px;
     cursor: pointer;
     filter: brightness(0) invert(1);
+}
+
+.head-p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.second-p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary-font-color);
+    cursor: pointer;
+}
+
+.right-content {
+    margin-bottom: 50px
+}
+
+.footer {
+    margin: 25px 0px;
+
+}
+
+.footer-left {
+    gap: 100px
+}
+
+.footer-left .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-left .head-p {
+    font-size: 18px;
+}
+
+.footer-left .second-p {
+    font-size: 14px;
+}
+
+.songs,
+.artist,
+.album {
+    gap: 8px;
+}
+
+.socials-img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+}
+
+.songs img,
+.artist img,
+.album img {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+}
+
+.artist img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.songs,
+.artist,
+.album {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.songs:hover,
+.artist:hover,
+.album:hover {
+    background-color: var(--tertiary-color);
+}
+
+.songs .song-name,
+.artist .artist-name,
+.album .album-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.songs .artist-name {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--secondary-font-color);
+}
+
+i {
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.play-btn {
+    font-size: 80px;
+}
+
+.play-btn:hover,
+.control-icon:hover,
+.fa-heart:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: all 0.1s ease-in-out;
+    color: rgb(72, 163, 72);
+}
+
+.fa-thumbs-down:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: all 0.1s ease-in-out;
+    color: rgb(255, 0, 0);
+}
+
+.left-playing-song img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
 }

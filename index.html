@@ -7,6 +7,8 @@
     <title>Spotify</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="utility.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -46,83 +48,223 @@
     </header>
     <div class="container flex">
         <div class="left border flex flex-direction-column justify-between">
-            <div class="left-top-content">
-                <div class="left-top flex align-items justify-between">
-                    <p>Your Library</p>
-                    <img src="./assets/svgs/plus.svg" alt="arrow-down">
+            <div class="left-top-content flex flex-direction-column justify-center" style="overflow:hidden;">
+                <div class="left-top flex align-items justify-center">
+                    <p style="font-size: 24px; font-weight: 600;">Now Playing</p>
                 </div>
-                <div class="left-playlist left-box flex flex-direction-column">
-                    <p class="head-box">Create your first playlist</p>
-                    <p class="second-box">It's easy, we'll help you</p>
-                    <button class="btn btn-box">Create playlist</button>
-                </div>
-                <div class="left-podcast left-box flex flex-direction-column">
-                    <p class="head-box">Let's find some podcasts to follow</p>
-                    <p class="second-box">We'll you keep you updated on new episodes</p>
-                    <button class="btn btn-box">Browse podcasts</button>
-                </div>
-            </div>
-            <div class="left-bottom-content">
-                <div class="left-grid grid grid-4">
-                    <a href="#" class="left-grid-link">Legal</a>
-                    <a href="#" class="left-grid-link">Safety & Privacy Center</a>
-                    <a href="#" class="left-grid-link">Privacy Policy</a>
-                    <a href="#" class="left-grid-link">Cookies</a>
-                    <a href="#" class="left-grid-link">About Ads</a>
-                    <a href="#" class="left-grid-link">Accessibility</a>
-                </div>
-                <div class="left-cookie">Cookies</div>
-                <div class="left-language flex align-items gap-10">
-                    <img src="./assets/svgs/language.svg" alt="language">
-                    <p class="language">English</p>
-                </div>
-            </div>
-        </div>
-        <div class="right border">
-            <div class="right-content">
-                <div class="right-content-heading flex justify-between">
-                    <p>Trending Songs</p>
-                    <p>Show all</p>
-                </div>
-                <div class="right-content-cards flex gap-10 justify-between">
-                    <div class="songs flex flex-direction-column">
-                        <img src="./assets/svgs/song.svg" alt="song">
-                        <p>song name</p>
-                        <p>artist name</p>
+                <div class="left-playing-song left-box flex flex-direction-column justify-center align-items gap-20">
+                    <p class="head-box" style="margin-bottom: 0; font-size: 20px; font-weight: 600;">Song Name</p>
+                    <p class="second-box" style="font-size: 16px; font-weight: 600; margin-bottom: 0;">Artist Name</p>
+                    <img src="https://i.scdn.co/image/ab67616d00001e029807367e712b4a7daf160a20" alt="now-playing-song">
+                    <div class="likes-dislikes flex align-items gap-35">
+                        <div class="likes flex align-items gap-10">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="dislikes flex align-items gap-10">
+                            <i class="fa-regular fa-thumbs-down"></i>
+                        </div>
                     </div>
-                    <div class="songs flex flex-direction-column">
-                        <img src="./assets/svgs/song.svg" alt="song">
-                        <p>song name</p>
-                        <p>artist name</p>
+                    <div class="seekBar">
+                        <div class="seekBar-left flex align-items gap-10">
+                            <p>0:00</p>
+                            <div class="seekBar-progress">
+                                <div class="seekBar-progress-bar"> <input type="range" min="0" max="100" value="50"
+                                        class="seekBar-input"></div>
+                            </div>
+                            <p>3:00</p>
+                        </div>
                     </div>
-                    <div class="songs flex flex-direction-column">
-                        <img src="./assets/svgs/song.svg" alt="song">
-                        <p>song name</p>
-                        <p>artist name</p>
+                    <div class="play-pause flex gap-35 align-items">
+                        <i class="fa-solid fa-shuffle control-icon" title="Shuffle"></i>
+                        <i class="fa-solid fa-backward-step control-icon" title="Previous"></i>
+
+                        <i class="fa-solid fa-play play-btn" style="z-index: 10;"></i>
+
+                        <i class="fa-solid fa-forward-step control-icon" title="Next"></i>
+                        <i class="fa-solid fa-repeat control-icon" title="Repeat"></i>
                     </div>
-                    <div class="songs flex flex-direction-column">
-                        <img src="./assets/svgs/song.svg" alt="song">
-                        <p>song name</p>
-                        <p>artist name</p>
-                    </div>
-                    <div class="songs flex flex-direction-column">
-                        <img src="./assets/svgs/song.svg" alt="song">
-                        <p>song name</p>
-                        <p>artist name</p>
-                    </div>
-                    <div class="songs flex flex-direction-column">
-                        <img src="./assets/svgs/song.svg" alt="song">
-                        <p>song name</p>
-                        <p>artist name</p>
+
+                    <div class="volume flex align-items gap-10">
+                        <i class="fa-solid fa-volume-xmark control-icon" title="Volume"></i>
+                        <div class="seekBar-progress">
+                            <div class="seekBar-progress-bar"> <input type="range" min="0" max="100" value="50"
+                                    class="seekBar-input"></div>
+                        </div>
+                        <i class="fa-solid fa-volume-high control-icon" title="Mute"></i>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="right border flex flex-direction-column gap-35 justify-between">
+            <Section class="right-top-section">
+                <div class="right-content flex flex-direction-column gap-20">
+                    <div class="right-content-heading flex justify-between">
+                        <p class="head-p">Your Songs</p>
+                        <p class="second-p">Show all</p>
+                    </div>
+                    <div class="right-content-cards flex gap-10 justify-between">
+                        <div class="songs flex flex-direction-column">
+                            <img src="" alt="song">
+                            <p class="song-name">song name</p>
+                            <p class="artist-name">artist name</p>
+                        </div>
+                        <div class="songs flex flex-direction-column">
+                            <img src="" alt="song">
+                            <p class="song-name">song name</p>
+                            <p class="artist-name">artist name</p>
+                        </div>
+                        <div class="songs flex flex-direction-column">
+                            <img src="" alt="song">
+                            <p class="song-name">song name</p>
+                            <p class="artist-name">artist name</p>
+                        </div>
+                        <div class="songs flex flex-direction-column">
+                            <img src="" alt="song">
+                            <p class="song-name">song name</p>
+                            <p class="artist-name">artist name</p>
+                        </div>
+                        <div class="songs flex flex-direction-column">
+                            <img src="" alt="song">
+                            <p class="song-name">song name</p>
+                            <p class="artist-name">artist name</p>
+                        </div>
+                        <div class="songs flex flex-direction-column">
+                            <img src="" alt="song">
+                            <p class="song-name">song name</p>
+                            <p class="artist-name">artist name</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="right-content flex flex-direction-column gap-20">
+                    <div class="right-content-heading flex justify-between">
+                        <p class="head-p">Your Artists</p>
+                        <p class="second-p">Show all</p>
+                    </div>
+                    <div class="right-content-cards flex gap-10 justify-between">
+                        <div class="artist flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Artist">
+                            <p class="artist-name">artist name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="artist flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Artist">
+                            <p class="artist-name">artist name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="artist flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Artist">
+                            <p class="artist-name">artist name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="artist flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Artist">
+                            <p class="artist-name">artist name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="artist flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Artist">
+                            <p class="artist-name">artist name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="artist flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Artist">
+                            <p class="artist-name">artist name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="right-content flex flex-direction-column gap-20">
+                    <div class="right-content-heading flex justify-between">
+                        <p class="head-p">Your Albums and Singles</p>
+                        <p class="second-p">Show all</p>
+                    </div>
+                    <div class="right-content-cards flex gap-10 justify-between">
+                        <div class="album flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Album">
+                            <p class="album-name">album name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="album flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Album">
+                            <p class="album-name">album name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="album flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Album">
+                            <p class="album-name">album name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="album flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Album">
+                            <p class="album-name">album name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="album flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Album">
+                            <p class="album-name">album name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                        <div class="album flex flex-direction-column">
+                            <img src="./assets/svgs/song.svg" alt="Album">
+                            <p class="album-name">album name</p>
+                            <p class="person-category">Artist</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <script src="index.js"></script>
+            <section>
+                <hr style="border: 1px solid #4d4d4d;">
+                <div class="footer flex flex-direction-column gap-20">
+                    <div class="footer-content flex justify-between">
+                        <div class="footer-left flex">
+                            <span class="company links">
+                                <p class="head-p">Company</p>
+                                <p class="second-p">About</p>
+                                <p class="second-p">Jobs</p>
+                                <p class="second-p">For the Record</p>
+                            </span>
+                            <span class="communities links">
+                                <p class="head-p">Communities</p>
+                                <p class="second-p">For Artists</p>
+                                <p class="second-p">Developers</p>
+                                <p class="second-p">Advertising</p>
+                                <p class="second-p">Investors</p>
+                                <p class="second-p">Vendors</p>
+                            </span>
+                            <span class="useful-links links">
+                                <p class="head-p">Useful Links</p>
+                                <p class="second-p">Support</p>
+                                <p class="second-p">Free Mobile App</p>
+                                <p class="second-p">Popular by Country</p>
+                                <p class="second-p">Import your music</p>
+                            </span>
+                            <span class="Spotify-plans links">
+                                <p class="head-p">Spotify Plans</p>
+                                <p class="second-p">Premium Individual</p>
+                                <p class="second-p">Premium Duo</p>
+                                <p class="second-p">Premium Family</p>
+                                <p class="second-p">Premium Student</p>
+                                <p class="second-p">Spotify Free</p>
+                            </span>
+                        </div>
+                        <div class="footer-right">
+                            <div class="socials flex align-items gap-20">
+                                <img src="./assets/svgs/facebook.svg" alt="Facebook" class="socials-img">
+                                <img src="./assets/svgs/instagram.svg" alt="Instagram" class="socials-img">
+                                <img src="./assets/svgs/twitter.svg" alt="Twitter" class="socials-img">
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border: 1px solid #4d4d4d;">
+                    <p>© 2025 Spotify AB</p>
+                </div>
+            </section>
+
+        </div>
+        <script src="index.js"></script>
 </body>
 
 </html>
